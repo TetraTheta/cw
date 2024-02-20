@@ -86,8 +86,8 @@ namespace cw {
             $"-o \"{convertedPath}\\{Path.GetFileNameWithoutExtension(file)}.webp\"",
             $"-- \"{file}\""
           });
-        Console.Title = $"[{idx:D3}/{files.Length:D3}] Processing {Path.GetFileName(file)} ...";
-        Console.WriteLine($"[{idx:D3}/{files.Length:D3}] Processing {Path.GetFileName(file)} ...");
+        Console.Title = $"[{idx+1:D3}/{files.Length:D3}] Processing {Path.GetFileName(file)} ...";
+        Console.WriteLine($"[{idx+1:D3}/{files.Length:D3}] Processing {Path.GetFileName(file)} ...");
         ProcessStartInfo startInfo = new ProcessStartInfo {
           FileName = "cwebp.exe",
           Arguments = string.Join(" ", argument),
